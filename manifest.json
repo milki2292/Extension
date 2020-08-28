@@ -3,9 +3,15 @@
     "description" : "My first chrome ex",
     "version": "0.1",
     "author" : "Kamil Szmuc",
-    "permissions" : [],
+    "permissions" : ["contextMenus","activeTab"],
     "manifest_version" : 2,
     "background" : {
-        "script" : ["src/background.js"]
-    }    
+        "scripts" : ["src/background.js"]
+    },
+    "content_scripts" : [
+        {
+            "matches" : ["*://www.google.com/*", "*://www.youtube.com/*"],
+            "js" : ["src/index.js"]
+        }
+    ]
 }
