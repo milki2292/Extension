@@ -1,0 +1,11 @@
+{
+    "name" : "My extension", 
+    "description" : "My first chrome ex",
+    "version": "0.1",
+    "author" : "Kamil Szmuc",
+    "permissions" : [],
+    "manifest_version" : 2,
+    "background" : {
+        "script" : ["src/background.js"]
+    }    
+}
